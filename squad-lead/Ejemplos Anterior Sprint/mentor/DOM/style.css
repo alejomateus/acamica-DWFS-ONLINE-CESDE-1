@@ -1,0 +1,17 @@
+/* .background_yellow {
+    background-color: yellow;
+}
+.background_blue {
+    background-color: rgb(2, 49, 255);
+    color: #fff;
+} */
+.square_container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    font-size: 12px;
+}

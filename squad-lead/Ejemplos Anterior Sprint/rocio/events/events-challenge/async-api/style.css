@@ -1,0 +1,11 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%; }
+  body .containerGifs {
+    border: 0.5em solid black;
+    width: 100%; }
+    body .containerGifs .imgnewgifos {
+      width: 40%; }
+
+/*# sourceMappingURL=style.css.map */

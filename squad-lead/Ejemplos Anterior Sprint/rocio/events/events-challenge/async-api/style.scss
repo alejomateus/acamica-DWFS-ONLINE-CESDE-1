@@ -1,0 +1,13 @@
+body {
+    box-sizing: border-box;
+    width: 100%;
+
+    .containerGifs {
+        border: 0.5em solid black;
+        width: 100%;
+    
+        .imgnewgifos {
+            width: 40%;
+        }
+    }
+}

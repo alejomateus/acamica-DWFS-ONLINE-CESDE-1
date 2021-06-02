@@ -1,0 +1,25 @@
+.container {
+    border: 1px solid grey;
+    border-radius: 5px;
+    max-width: 25vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tarjeta {
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.texto {
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+

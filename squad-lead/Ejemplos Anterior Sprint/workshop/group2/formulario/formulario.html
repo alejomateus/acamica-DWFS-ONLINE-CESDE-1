@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h3>Ingrese sus datos</h3>
+
+    <form class="formulario">
+        <!-- GET POST PUT DELETE PATCH -->
+        <div>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ej.: Juan" required> <br>
+        </div>
+        <div> <label for="apellido">Apellido </label>
+            <input type="text" name="apellido" id="apellido" placeholder="Ej.: Sanchez" required> <br></div>
+        <div>
+            <label for="mail">E-mail: </label>
+            <input type="email" name="mail" id="mail" placeholder="E-mail" required><br>
+        </div>
+        <div> <label for="direccion">Dirección </label>
+            <input type="text" name="direccion" id="direccion" placeholder="Ej.: Estados Unidos" required> <br></div>
+        <div>
+            <div> <label for="ciudad">Ciudad </label>
+                <input type="text" name="ciudad" id="Ciudad" placeholder="Ej.: Córdoba" required> <br></div>
+            <div>
+                <div> <label for="telefono">Teléfono</label>
+                    <input type="number" name="telefono" id="Telefono" placeholder="Ej.: 3512222333" required> <br>
+                </div>
+                <div>
+                    <div> <label for="mediodepago">Medio de Pago</label>
+                        <select id="mediodepago" name="mediodepago" required>
+                            <option selected disabled value="">Selecciona</option>
+                            <option value="credito">Crédito</option>
+                            <option value="debito">Débito</option>
+                            <option value="efectivo">Efectivo</option>
+
+                        </select>
+
+                        <div>
+                            <div> <label for="formadeentrega">Forma de Entrega</label>
+                                <select id="formadeentrega" name="formadeentrega" required>
+                                    <option selected disabled value="">Selecciona</option>
+                                    <option value="retiralocal">Retira en el Local</option>
+                                    <option value="envio">Envío</option>
+
+
+                                </select>
+
+                                <div>
+                                    <button>
+                                        <h5>Enviar</h5>
+                                    </button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<form class="payRegister" id="payRegister">
+    <h4>Opciones de pago</h4><br>
+    <label for="payOption1">Total</label>
+    <input type="checkbox" id="payOption1" name="payOption1"><br>
+    <label for="payOption2">Cuotas</label>
+    <input type="checkbox" id="payOption2" name="payOption2"><br>
+    <select name="financiacion" class="financiacion" id="financiacion"><br>
+        <option value="0" required>Cantidad de cuotas:</option>
+        <option value="1">3</option>
+        <option value="1">6</option>
+        <option value="1">9</option>
+        <option value="1">12</option>
+    </select><br>
+    <h4>Medio de pago</h4><br>
+    <label for="transfer">Transferencia</label>
+    <input type="checkbox" id="transfer" name="transfer"><br>
+    <label for="debitCard">Tarjeta de Débito</label>
+    <input type="checkbox" id="debitCard" name="debitCard"><br>
+    <label for="creditCard">Tarjeta de Crédito</label>
+    <input type="checkbox" id="creditCard" name="creditCard"><br>
+    <h4>Datos del medio de pago</h4><br>
+    <label for="fullName">Nombre completo</label><br>
+    <input type="text" id="fullName" name="fullName" placeholder="Jose" required><br>
+    <label for="numberPay">Número de la tarjeta o CBU/CVU</label><br>
+    <input type="text" id="numberPay" name="numberPay" placeholder="0000000000000000" required><br>
+    <label for="date">Fecha de vencimiento</label>
+    <input type="text" id="date" name="date"><br>
+    <label for="code">Código de seguridad</label>
+    <input type="text" id="code" name="code"><br>
+    <button class="buttonRegister" id="buttonRegister">Pagar</button>
+  </form>
+
+
+
+

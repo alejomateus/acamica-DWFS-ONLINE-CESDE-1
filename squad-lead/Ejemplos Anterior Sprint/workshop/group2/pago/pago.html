@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+</head>
+<body>
+    <h1>Datos de tarjeta</h1>
+
+    <form>
+        <div>
+            <label for="nombre">Nombre completo (como figura en la tarjeta): </label>
+            <input type="text" name="nombre" id="nombre" placeholder="Jose Perez" required>
+        </div>
+        <div>
+            <label for="numeroTarjeta">Numero de tarjeta </label>
+            <input type="text" name="numeroTarjeta" id="numeroTarjeta" placeholder="1234 5678 8765 4321" required>
+        </div>
+        <div>
+            <label for="vencimiento">Fecha de vencimiento </label>
+            <input type="text" name="vencimiento" id="vencimiento" placeholder="12/21" required>
+        </div>
+        <div>
+            <label for="seguridad">Codigo de seguridad </label>
+            <input type="number" name="seguridad" id="seguridad" placeholder="123" required>
+        </div>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar el formulario</button>
+    </form>
+</body>
+</html>
