@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home banking</title>
+</head>
+
+<body>
+    <div class="text-right">
+        <a id="logout">Cerrar sesion</a>
+    </div>
+    <div class="form">
+        <div class="form-input">
+            <span>Cuenta Origen</span>
+            <select name="sourceAccount" id="sourceAccount"></select>
+        </div>
+        <div class="form-input">
+            <span>Cuenta Destino</span>
+            <select name="destinationAccount" id="destinationAccount"></select>
+        </div>
+        <div class="form-input">
+            <span>Monto (COP)</span>
+            <input type="number" id="amount">
+        </div>
+        <div class="space"></div>
+        <div class="button-container">
+            <button class="checkButton" type="button" id="transfer">
+                Transferir
+            </button>
+        </div>
+        <div class="process_box">
+            <span id="process"></span>
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+
+</html>

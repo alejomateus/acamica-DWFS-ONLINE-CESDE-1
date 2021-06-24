@@ -1,0 +1,80 @@
+img{
+    border: 1px solid #000;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+header img{
+    width: 100px;
+    height: 80px;
+    margin: 0 30px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li{
+    margin: 0 30px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    
+}
+
+.section-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.section-1 img{
+    margin: 0 40px;
+    width: 500px;
+}
+
+.section-1 div{
+    width: 350px;
+    margin: 0 40px;
+}
+
+.section-2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.section-2 div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.section-2 div div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-2 div div img{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin: 30px;
+}
+
+.section-2 div input{
+    width: 60%;
+    height: 60px;
+    margin: 40px;
+    background-color: gray;
+    font-size: 25px;
+}

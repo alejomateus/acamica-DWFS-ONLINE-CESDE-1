@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    background: #ffffff;
+    width: 100%;
+    top: 0;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header nav {
+    padding: 15px 0px;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+span {
+    font-size: 20px;
+}
+
+span.logo {
+    float: left;
+}
+
+/*btn cerrar menu*/
+span.btn-close-menu{
+  display: none;
+
+
+}
+
+/*btn barras*/
+span.btn-menu{
+    display: none;
+}
+
+
+ul {
+    list-style: none;
+    font-size: 25px;
+    float: right;
+}
+
+ul li {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 17px;
+}
+
+ul li:last-child {
+    padding-right: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    color: #ffffff;
+    font-size: 60px;
+}
+
+
+.section-one {
+    margin-top: 53px;
+    background: #150940;
+}
+
+.section-two {
+    background: #F29849;
+}
+
+.section-three {
+    background: #2703A6;
+}
+
+.section-four {
+    background: #F2B749;
+}
+
+@media screen and (max-width: 768px){
+    
+    ul {
+        width: 100%;
+        margin-top: 40px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-left: -100%;
+        background: #ffffff;
+        height: 100vh;
+        float: none;
+    }
+
+
+    
+
+    ul li {
+        display: block;
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-bottom: 1px solid grey;
+    }
+
+    /*btn de las barras*/
+    span.btn-menu{
+        display: inline;
+        float: right;
+    }
+
+    span.btn-close-menu{
+        float: right;
+      }
+}

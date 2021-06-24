@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    #container {
+        width: 248px;
+        height: 248px;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #container div {
+        width: 30px;
+        height: 30px;
+        border: 0.5px solid black;
+    }
+</style>
+
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        function addListener(id) {
+            let div  = document.getElementById(id);
+
+            div.addEventListener('click',()=>{
+                (div.style.backgroundColor == "red") ? div.style.backgroundColor = "white" : div.style.backgroundColor = 'red';
+            });
+        }
+
+        for (let index = 1; index < 65; index++) {
+
+            let div = document.createElement('div');
+            div.id = `div-${index}`;
+            document.getElementById('container').appendChild(div);
+            addListener(`div-${index}`);
+        }
+    </script>
+</body>
+
+</html>
