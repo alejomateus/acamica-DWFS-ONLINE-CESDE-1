@@ -1,3 +1,29 @@
+console.log(process.argv);
+const Sequelize = require("sequelize");
+const config = {
+    "username": "root",
+    "password": null,
+    "database": "home_banking",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "logging": false
+}
+const sequelize = new Sequelize(config.database, config.username, config.password, config);
+
+// let connect = async () => {
+//     try {
+//         const data = await sequelize.authenticate();
+//         console.log('Connection has been established successfully.');
+//     } catch (error) {
+//         console.error('Unable to connect to the database:', error);
+//     }
+// }
+// connect();
+// sequelize.query('SELECT * FROM users', {
+//     type: sequelize.QueryTypes.SELECT
+// }).then((res)=>{
+//     console.log(res);
+// })
 /** Aqui asignamos a una constante llamada 
  * express la libreria de express por medio 
  * del metodo require */
@@ -279,21 +305,43 @@ app.post("/login", [checkLimite, validateRequestLogin], (req, res) => {
 /**
  * Request para registrar un nuevo usuario
  */
-app.post("/signup", validateRequestSignUp, (req, res) => {
-    let userLogged = users.find((user) => (user.id == req.body.id));
+app.post("/signup", validateRequestSignUp, async (req, res) => {
+    let userLogged = await sequelize.query('SELECT * FROM users WHERE id =' + req.body.id, {
+        type: sequelize.QueryTypes.SELECT
+    });
     let response;
-    if (userLogged) {
+    if (userLogged.length > 0) {
         response = getResponseObject(500, "El usuario ya esta registrado");
     } else {
         req.body.role = "customer";
         req.body.logged = false;
-        users.push(req.body);
-        accounts.push({
-            userId: req.body.id,
-            accountId: (users.length + 1),
-            amount: 0
-        })
-        response = getResponseObject(200, "El registro esta completo ahora ingresa");
+        try {
+            await sequelize.query("INSERT INTO users VALUES (" +
+                req.body.id + ",'" + req.body.name +
+                "','" + req.body.lastname +
+                "','" + req.body.email +
+                "','" + req.body.phoneNumber +
+                "','" + req.body.password +
+                "','" + req.body.role +
+                "'," + req.body.logged + ")", {
+                type: sequelize.QueryTypes.INSERT
+            });
+
+            await sequelize.query("INSERT INTO accounts VALUES (NULL," + req.body.id +", 100000)", {
+                type: sequelize.QueryTypes.INSERT
+            });
+            
+            response = getResponseObject(200, "El registro esta completo ahora ingresa");
+        } catch (error) {
+            console.log(error);
+            response = getResponseObject(500, "Internal Server Error");
+        }
+        // users.push(req.body);
+        // accounts.push({
+        //     userId: req.body.id,
+        //     accountId: (users.length + 1),
+        //     amount: 0
+        // })
     }
     res.status(response.code).json(response);
 });

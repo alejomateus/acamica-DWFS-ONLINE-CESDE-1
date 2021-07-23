@@ -31,6 +31,7 @@ const listarCuentas = async () => {
             let sourceAccount = document.getElementById("sourceAccount");
             sourceAccount.innerHTML = "";
             let destinationAccount = document.getElementById("destinationAccount");
+            const parseUserLogger = JSON.parse(userLogged);
             destinationAccount.innerHTML = "";
             accounts.forEach(account => {
                 let containerOption = document.createElement('option');
