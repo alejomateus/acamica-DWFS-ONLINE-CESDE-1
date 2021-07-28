@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastName` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `phoneNumber` varchar(50) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
+  `password` varchar(500) DEFAULT NULL,
   `role` enum('admin','customer') DEFAULT 'customer',
   `logIn` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`),

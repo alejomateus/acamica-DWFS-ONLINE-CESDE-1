@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "874f55dc-cc44-406b-897b-023c504f3c19",
+		"name": "Repaso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Lista de cuentas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1023013040",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/accounts/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asignar valor a cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1023013040",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyMzAxMzA0MCwibmFtZSI6IkFsZWphbmRybyIsImxhc3RuYW1lIjoiSmltZW5leiIsImVtYWlsIjoiYWxlam8ubWF0ZXVzLnVkQGdtYWlsLmNvbSIsInBob25lTnVtYmVyIjoiMzE0MzcyMDc4MyIsImlhdCI6MTYyNDQxMTM4OSwiZXhwIjoxNjI0NDE0OTg5fQ.W0lHpbMnClFOkMSvd3tb_z8RgKutaflPSp7L6Leey_k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/accounts/assign-amount/1?amount=200000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts",
+								"assign-amount",
+								"1"
+							],
+							"query": [
+								{
+									"key": "amount",
+									"value": "200000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferencia entre cuentas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1023013040",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountDestination\": 2,\r\n    \"amount\": 30000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/accounts/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1023013040,\r\n    \"password\": \"Alejo@123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1023013042,\r\n    \"password\": \"Alejo@123456\",\r\n    \"name\": \"Alejo1\",\r\n    \"lastname\":  \"Mateus1\",\r\n    \"phoneNumber\": \"3143224477\",\r\n    \"email\": \"alejo.mateus.ud2@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

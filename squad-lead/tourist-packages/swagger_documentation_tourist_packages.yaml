@@ -1,0 +1,72 @@
+swagger: "2.0"
+info:
+  description: "Paquetes turisticos"
+  version: "1.0.0"
+  title: "Compra y Administracion de paquetes turisticos"
+  contact: 
+    email: "alejo.mateus.ud@gmail.com"
+tags: 
+- name: "signIn"
+  description: "Operaciones de autenticacion"
+schemes:
+- "http"
+paths:
+  /auth/signin:
+    post:
+      tags:
+      - "signIn"
+      summary: "Permite logear a un usuario"
+      operationId: "SignIn"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Objeto request para loger un usuario"
+        required: true
+        schema:
+          $ref: "#/definitions/signinRequest"
+      responses:
+        "200":
+          description: "Data"
+          schema: 
+            $ref: "#/definitions/signinResponse"
+        "400":
+          description: "Invalid Request"
+        "500":
+          description: "Internal Server Error"
+definitions:
+  signinResponse:
+    type: "object"
+    properties:
+     message: 
+      type: "string"
+     user:
+      type: "object"
+      properties:
+        id:
+          type: "integer"
+          format: "int64"
+        name: 
+          type: "string"
+        lastName: 
+          type: "string"
+        email: 
+          type: "string"
+        phoneNumber: 
+          type: "string"
+        role: 
+          type: "string"
+        logIn: 
+          type: "boolean"
+     token: 
+      type: "string"
+  signinRequest:
+    type: "object"
+    properties:
+     email: 
+      type: "string"
+     password: 
+      type: "string"
